@@ -1,0 +1,29 @@
+//31stMay2022
+public class Solution {
+  public static int sumOfMaxMin(int[] arr, int n) {
+      // Write your code here.
+      int sum = 0;
+      int min = Integer.MAX_VALUE;
+      int min_value = 0;
+      for (int i = 0; i<n ;i++)
+      {
+          if (arr[i]<min)
+          {
+              min = arr[i];
+          }
+      }
+      min_value = min;
+      int max = Integer.MIN_VALUE ;
+      int max_value = 0;
+      for (int j = 0; j<n ;j++)
+      {
+          if (arr[j]>max)
+          {
+              max = arr[j];
+          }
+      }
+      max_value = max;
+      sum = min_value+max_value;
+      return sum;
+  }
+}
