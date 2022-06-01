@@ -1,0 +1,26 @@
+public class Solution {
+    public static int pairSum(int arr[], int n, int target) {
+        // Write your code here.
+        int count  = 0;
+        boolean checkpair = false;
+        for (int i = 0; i<arr.length ; i++)
+        {
+                for (int j = i+1; j<arr.length ; j++)
+                {
+                    if (i!=j)
+                    {  
+                        if ((arr[i]+arr[j])==target)
+                         {
+                            ++count;
+                            checkpair = true;
+                         }
+                    }       
+                }
+        }
+        if (checkpair)
+        {
+            return count;
+        }
+        return -1;
+    }
+}
